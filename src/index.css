@@ -33,3 +33,10 @@ h1 {
     border: none;
     outline: none;
 }
+
+
+.movies:hover {
+    background: linear-gradient(0, 0, 0, 0.5);
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
+}
