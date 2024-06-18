@@ -11,8 +11,8 @@ function App() {
       </div>
       <div className="mt-4 flex flex-col items-center justify-center">
         <img src={cook} alt="" className="w-[250px]" />
-        <h4 className="mt-5 text-white font-bold text-[30px]">opps!</h4>
-        <p className="text-white text-[18px]">sorry chief faruq is currently cooking this web app</p>
+        <h4 className="mt-5 text-white font-bold text-[30px]">opps! 😌</h4>
+        <p className="text-white text-[18px]">😜 sorry chief faruq is currently cooking this web app pls come back later 😜</p>
       </div>
     </div>
   )
