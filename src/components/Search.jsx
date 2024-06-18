@@ -5,12 +5,9 @@ import { useState } from 'react';
 const Search = ({ searchText }) => {
   const [text, setTex] = useState('');
 
-  const handlesubmit = (e)=>{
-    e.preventDefault();
-    searchText(text)
-  }
   return (
-    <div className="flex items-center justify-center bg-black w-[100%] sm:w-[71%] mt-5 px-3 py-2 sm:py-3 sm:px-4 rounded-[30px] search " onSubmit={handlesubmit}>
+    
+      <div className="flex items-center justify-center bg-black w-[100%] sm:w-[71%] mt-5 px-3 py-2 sm:py-3 sm:px-4 rounded-[30px] search ">
     <input
       type="search"
       className="bg-[#1f2123] flex-1 w-[100%] pr-3 text-[#a1a1a1] font-medium font-Raleway search_input"

@@ -9,11 +9,13 @@ function App() {
 
  const getMovies = async ()=>{
     try {
-      const url = `http://www.omdbapi.com/?s=star wars&apikey=7fe4c5c5`;
+      const url = `http://www.omdbapi.com/?s=avengers&apikey=7fe4c5c5`;
       const res = await fetch(url);
       const resJson = await res.json();
       // console.log(resJson);
-      setMovies(resJson.Search)
+
+      setMovies(resJson.Search);
+      
       setIsloading(false)
     } catch(error) {
       console.log(error);
@@ -23,12 +25,12 @@ function App() {
 
  useEffect(()=>{
   getMovies();
- }, [term])
+ }, [])
 
   return (
     <div className="flex flex-col justify-center items-center px-16">
       <h1 className="text-[3rem] text-white">MovieBox</h1>
-      <Search searchText={(text)=> setTerm(text)} />
+      <Search />
       {isloading ? <h1 className='text-white text-3xl text-center'>Loading....</h1> : <div className='grid grid-rows sm:grid-cols-3 gap-5'>
         {movies.map((movie)=>(
           <div>
