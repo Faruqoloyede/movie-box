@@ -4,9 +4,9 @@ import React from 'react'
 const MovieList = ({ movie }) => {
   return (
     <div>
-        <div className='max-w-sm rounded-[12px] overflow-wrap cursor-pointer movies mt-7'>
+        <div className='max-w-sm rounded-[12px] overflow-wrap cursor-pointer movies my-7'>
       <img src={movie.Poster} alt="poster"/>
-      <div className='max-w-[300px] px-3 py-4 bg-black overflow-wrap'>
+      <div className='max-w-[300px] px-3 py-4 bg-black'>
         <div className='font-normal text-[#9ef3fc] text-[18px] mb-2 font-roboto'>
             Title: {movie.Title} <br />
         </div>
