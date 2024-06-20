@@ -36,7 +36,7 @@ function App() {
  }, [])
 
   return (
-    <div className="flex flex-col justify-center items-center px-16">
+    <div className="flex flex-col justify-center items-center px-6 sm:px-16">
       <h1 className="text-[3rem] text-white">MovieBox</h1>
       <Search />
       {isloading ? <h1 className='text-white text-3xl text-center'>Loading....</h1> : <div className='grid grid-rows sm:grid-cols-3 gap-5'>
