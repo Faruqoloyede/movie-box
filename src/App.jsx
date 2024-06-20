@@ -24,11 +24,14 @@ function App() {
 //  };
 
  useEffect(()=>{
-  fetch("http://www.omdbapi.com/?s=avengers&apikey=7fe4c5c5")
+  fetch("https://www.omdbapi.com/?s=avengers&apikey=7fe4c5c5")
   .then(res => res.json())
   .then((data)=>{
     setMovies(data.Search)
     setIsloading(false)
+  })
+  .catch((err)=>{
+    console.log(err);
   })
  }, [])
 
