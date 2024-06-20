@@ -7,24 +7,29 @@ function App() {
  const [isloading, setIsloading] = useState(true);
  const [term, setTerm] = useState("");
 
- const getMovies = async ()=>{
-    try {
-      const url = `http://www.omdbapi.com/?s=avengers&apikey=7fe4c5c5`;
-      const res = await fetch(url);
-      const resJson = await res.json();
-      // console.log(resJson);
+//  const getMovies = async ()=>{
+//     try {
+//       const url = `http://www.omdbapi.com/?s=avengers&apikey=7fe4c5c5`;
+//       const res = await fetch(url);
+//       const resJson = await res.json();
+//       // console.log(resJson);
 
-      setMovies(resJson.Search);
+//       setMovies(resJson.Search);
       
-      setIsloading(false)
-    } catch(error) {
-      console.log(error);
-      setIsloading(false);
-    }
- };
+//       setIsloading(false)
+//     } catch(error) {
+//       console.log(error);
+//       setIsloading(false);
+//     }
+//  };
 
  useEffect(()=>{
-  getMovies();
+  fetch("http://www.omdbapi.com/?s=avengers&apikey=7fe4c5c5")
+  .then(res => res.json())
+  .then((data)=>{
+    setMovies(data.Search)
+    setIsloading(false)
+  })
  }, [])
 
   return (
